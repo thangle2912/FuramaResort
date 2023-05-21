@@ -1,0 +1,84 @@
+<div class="container">
+  <div class="title">Add Facility</div>
+  <div class="content">
+    <form [formGroup]="facilityForm" (ngSubmit)="submit()">
+      <div class="user-details">
+        <div class="input-box">
+          <span class="details">Facility Type</span>
+          <select class="form-select" formControlName="facilityType" (change)="changeFacility($event.target.value)">
+            <option value="">-----Choose-----</option>
+            <option *ngFor="let item of facilityTypeList" [value]="item.id">{{item.name}}</option>
+            <p style="color:red"
+               *ngIf="facilityForm.controls.facilityType.hasError('required') && facilityForm.controls.facilityType.touched">
+              Is not blank</p>
+          </select>
+        </div>
+        <div class="input-box">
+          <span class="details">Name</span>
+          <input type="text" formControlName="name" placeholder="Enter your name">
+          <p style="color:red"
+             *ngIf="facilityForm.controls.name.hasError('required') && facilityForm.controls.name.touched"> Is not
+            blank</p>
+          <p style="color:red" *ngIf="facilityForm.controls.name.hasError('pattern')"> Name is not number</p>
+        </div>
+        <div class="input-box">
+          <span class="details">Cost</span>
+          <input type="number" formControlName="cost" placeholder="Enter your cost">
+          <p style="color:red"
+             *ngIf="facilityForm.controls.cost.hasError('required') && facilityForm.controls.cost.touched"> Is not
+            blank</p>
+
+        </div>
+        <div class="input-box">
+          <span class="details">Area</span>
+          <input type="number" formControlName="area" placeholder="Enter your area" required>
+          <p style="color:red"
+             *ngIf="facilityForm.controls.area.hasError('required') && facilityForm.controls.area.touched"> Is not
+            blank</p>
+        </div>
+        <div class="input-box">
+          <span class="details">Max People</span>
+          <input type="number" formControlName="maxPeople" placeholder="Enter your max people">
+          <p style="color:red"
+             *ngIf="facilityForm.controls.maxPeople.hasError('required') && facilityForm.controls.maxPeople.touched"> Is
+            not blank</p>
+        </div>
+        <div class="input-box">
+          <span class="details">Rent Type</span>
+          <select class="form-select" formControlName="rentType">
+            <option value="">-----Choose-----</option>
+            <option *ngFor="let item of rentTypeList" [ngValue]="item">{{item.name}}</option>
+            <p style="color:red"
+               *ngIf="facilityForm.controls.rentType.hasError('required') && facilityForm.controls.rentType.touched"> Is
+              not blank</p>
+          </select>
+        </div>
+        <div class="input-box" *ngIf="temp == 1 || temp == 2">
+          <span class="details">Standard Room</span>
+          <input type="text" formControlName="standardRoom" placeholder="Enter your standard room">
+        </div>
+        <div class="input-box" *ngIf="temp == 1 || temp == 2">
+          <span class="details">Other</span>
+          <input type="text" formControlName="other" placeholder="Enter your other">
+        </div>
+        <div class="input-box" *ngIf="temp == 2 ">
+          <span class="details">Pool</span>
+          <input type="number" formControlName="pool" placeholder="Enter your pool">
+          <p style="color:red" *ngIf="facilityForm.controls.pool.hasError('min')"> Number > 0</p>
+        </div>
+        <div class="input-box" *ngIf="temp == 1 || temp == 2">
+          <span class="details">Floors</span>
+          <input type="number" formControlName="floors" placeholder="Enter your floors">
+          <p style="color:red" *ngIf="facilityForm.controls.floors.hasError('min')"> Number > 0</p>
+        </div>
+        <div class="input-box" *ngIf="temp == 3 ">
+          <span class="details">Free</span>
+          <input type="text" formControlName="free" placeholder="Enter your free">
+        </div>
+      </div>
+      <div class="button">
+        <input type="submit" [disabled]="!facilityForm.valid" value="Save">
+      </div>
+    </form>
+  </div>
+</div>

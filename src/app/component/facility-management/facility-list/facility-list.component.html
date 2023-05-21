@@ -1,0 +1,94 @@
+<img src="../../../../assets/img/banner01.jpg" height="350" width="100%"/><br>
+<div class="container-fluid">
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active"></div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4" *ngFor="let item of facilityList | paginate: { itemsPerPage: 3, currentPage: p }">
+          <div class="card" style="width: 100%;margin-bottom: 30px">
+            <img
+              [src]="item.img"
+              class="card-img-top" alt="...">
+            <div class="card-body">
+              <p style="font-size: 20px" class="card-text"><b>{{item.name}}</b> <br>
+                <sup>Room size: {{item.area}}m<sup>2</sup></sup><br>
+                <sup>Cost: {{item.cost}}$</sup>
+              </p>
+              <div style="display: flex;justify-content: space-between">
+                <div>
+                  <a [routerLink]="['/facility/edit',item.id]" role="button" class="btn btn-outline-success">Edit</a>
+                </div>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal"
+                        data-bs-target="#detail" (click)="showDetail(item)">Detail
+                </button>
+                <div>
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
+                          data-bs-target="#delete" (click)="showDelete(item)">Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="text-align: center">
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal delete-->
+<div class="modal fade" id="delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel1">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Do you want delete id: {{idDelete}} with name: {{name}}
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="delete(idDelete)">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal detail-->
+<div class="modal fade" id="detail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Detail</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Stt : {{id}}</p>
+        <p>Name : {{name}}</p>
+        <p>Area : {{area}}m2</p>
+        <p>Cost : {{cost}}$</p>
+        <p>Max PeoPle : {{maxPeople}}</p>
+        <p>Rent Type : {{rentType}}</p>
+        <p>Facility Type : {{facilityType}}</p>
+        <p>Standard Room : {{standardRoom}}</p>
+        <p>Other : {{other}}</p>
+        <p>Pool : {{pool}}m2</p>
+        <p>Floors : {{floors}}</p>
+        <p>Free : {{free}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

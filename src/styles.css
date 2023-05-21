@@ -1,0 +1,76 @@
+ul{
+  margin-bottom: 0;
+}
+
+li{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+.menu{
+  background-color: #046056;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.menu .sub-menu{
+  display: flex;
+}
+
+.menu .sub-menu .item{
+  position: relative;
+  padding-right: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-menu .item .title{
+  text-decoration: none;
+  color: #fff;
+}
+
+.sub-menu .item .bi-caret-down-fill{
+  padding-left: 0.3rem;
+}
+
+.sub-menu .item .list-menu{
+  position: absolute;
+  z-index: 1000;
+  top: 25px;
+  left: -30px;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 0.25rem;
+  display: none;
+}
+
+.sub-menu .item .list-menu .item-menu .title-menu{
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1rem;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+
+.menu .sub-menu .item:hover .list-menu{
+  display: block
+}
+
+.sub-menu .item .list-menu .item-menu .title-menu:hover{
+  color: #1e2125;
+  background-color: #e9ecef;
+}
+

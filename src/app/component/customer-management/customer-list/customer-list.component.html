@@ -1,0 +1,67 @@
+<div style="text-align: center">
+  <h2>Customer list</h2>
+</div>
+<div class="container">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">STT</th>
+      <th scope="col">Customer type</th>
+      <th scope="col">Name</th>
+      <th scope="col">Birth day</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Id Card</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Email</th>
+      <th scope="col">Address</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of customerList | paginate: { itemsPerPage: 3, currentPage: p } ; index as i">
+      <td>{{i + 1}}</td>
+      <td>{{item.customerType.name}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.dayOfBirth}}</td>
+      <td>{{item.gender}}</td>
+      <td>{{item.idCard}}</td>
+      <td>{{item.phone}}</td>
+      <td>{{item.email}}</td>
+      <td>{{item.address}}</td>
+      <td>
+        <a [routerLink]="['/customer/edit',item.id]" class="btn btn-success" role="button">Edit</a>
+      </td>
+      <td>
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="showDelete(item)">
+          Delete
+        </button>
+      </td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div style="text-align: center">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Do you want delete id: {{idDelete}} with name: {{name}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="delete(idDelete)">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>

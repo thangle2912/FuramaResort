@@ -1,0 +1,353 @@
+{
+  "customer": [
+    {
+      "id": 1,
+      "customerType": {
+        "id": 3,
+        "name": "Gold"
+      },
+      "name": "Nguyen Van A",
+      "dayOfBirth": "2022-08-05",
+      "gender": "Female",
+      "idCard": "123123123",
+      "phone": "0908765432",
+      "email": "a@gmail",
+      "address": "Quảng Nam"
+    },
+    {
+      "id": 2,
+      "customerType": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "name": "A",
+      "dayOfBirth": "1999-08-10",
+      "gender": "LGBT",
+      "idCard": "123123132",
+      "phone": "905123123",
+      "email": "a@g",
+      "address": "1"
+    },
+    {
+      "id": 3,
+      "customerType": {
+        "id": 5,
+        "name": "Member"
+      },
+      "name": "A",
+      "dayOfBirth": "1111-08-05",
+      "gender": "LGBT",
+      "idCard": "123456789",
+      "phone": "905123123",
+      "email": "a@g",
+      "address": "1"
+    },
+    {
+      "id": 5,
+      "customerType": {
+        "id": 5,
+        "name": "Member"
+      },
+      "name": "A",
+      "dayOfBirth": "1111-08-05",
+      "gender": "LGBT",
+      "idCard": "123456789",
+      "phone": "905123123",
+      "email": "a@g",
+      "address": "1"
+    },
+    {
+      "id": 6,
+      "customerType": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "name": "A",
+      "dayOfBirth": "1999-08-10",
+      "gender": "LGBT",
+      "idCard": "123123132",
+      "phone": "905123123",
+      "email": "a@g",
+      "address": "1"
+    },
+    {
+      "id": 7,
+      "customerType": {
+        "id": 5,
+        "name": "Member"
+      },
+      "name": "A",
+      "dayOfBirth": "1111-08-05",
+      "gender": "LGBT",
+      "idCard": "123456789",
+      "phone": "905123123",
+      "email": "a@g",
+      "address": "1"
+    },
+    {
+      "id": 42,
+      "customerType": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "name": "A",
+      "dayOfBirth": "1999-08-10",
+      "gender": "LGBT",
+      "idCard": "123123132",
+      "phone": "905123123",
+      "email": "a@g",
+      "address": "1"
+    },
+    {
+      "id": 43,
+      "customerType": {
+        "id": 5,
+        "name": "Member"
+      },
+      "name": "A",
+      "dayOfBirth": "1111-08-05",
+      "gender": "LGBT",
+      "idCard": "123456789",
+      "phone": "905123123",
+      "email": "a@g",
+      "address": "1"
+    },
+    {
+      "id": 44,
+      "customerType": {
+        "id": 2,
+        "name": "Platinum"
+      },
+      "name": "Thang Le",
+      "dayOfBirth": "2000-12-29",
+      "gender": "Male",
+      "idCard": "111111111",
+      "phone": "0915337366",
+      "email": "thangle2912@gmail.com",
+      "address": "NO"
+    }
+  ],
+  "customerType": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platinum"
+    },
+    {
+      "id": 3,
+      "name": "Gold"
+    },
+    {
+      "id": 4,
+      "name": "Silver"
+    },
+    {
+      "id": 5,
+      "name": "Member"
+    }
+  ],
+  "facility": [
+    {
+      "id": 1,
+      "name": "BEACH FRONT VILLAS",
+      "area": "150",
+      "cost": "1000",
+      "maxPeople": "5",
+      "rentType": {
+        "id": 1,
+        "name": "Year"
+      },
+      "facilityType": {
+        "id": 1,
+        "name": "Villa"
+      },
+      "standardRoom": "Vip",
+      "other": "No",
+      "pool": "50",
+      "floors": "3",
+      "free": "1",
+      "img": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg"
+    },
+    {
+      "id": 2,
+      "name": "BEACH FRONT VILLAS",
+      "area": "150",
+      "cost": "1000",
+      "maxPeople": "5",
+      "rentType": {
+        "id": 3,
+        "name": "Day"
+      },
+      "facilityType": {
+        "id": 1,
+        "name": "Villa"
+      },
+      "standardRoom": "Vip",
+      "other": "No",
+      "pool": "50",
+      "floors": "3",
+      "free": "",
+      "img": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg"
+    },
+    {
+      "id": 3,
+      "name": "ZZZ",
+      "area": 1,
+      "cost": 1,
+      "maxPeople": 1,
+      "rentType": {
+        "id": 1,
+        "name": "Year"
+      },
+      "facilityType": {
+        "id": 3,
+        "name": "Room"
+      },
+      "standardRoom": "",
+      "other": "",
+      "pool": "",
+      "floors": "",
+      "free": "1",
+      "img": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Deluxe-double-bed-F-370x239.jpg"
+    },
+    {
+      "id": 4,
+      "name": "1",
+      "area": 1,
+      "cost": 1,
+      "maxPeople": 1,
+      "rentType": {
+        "id": 4,
+        "name": "Hour"
+      },
+      "facilityType": {
+        "id": 3,
+        "name": "Room"
+      },
+      "standardRoom": "",
+      "other": "",
+      "pool": "",
+      "floors": "",
+      "free": "1",
+      "img": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Deluxe-double-bed-F-370x239.jpg"
+    },
+    {
+      "id": 5,
+      "name": "1",
+      "area": 1,
+      "cost": 1,
+      "maxPeople": 1,
+      "rentType": {
+        "id": 4,
+        "name": "Hour"
+      },
+      "facilityType": {
+        "id": 3,
+        "name": "Room"
+      },
+      "standardRoom": "",
+      "other": "",
+      "pool": "",
+      "floors": "",
+      "free": "1",
+      "img": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Deluxe-double-bed-F-370x239.jpg"
+    }
+  ],
+  "facilityType": [
+    {
+      "id": 1,
+      "name": "Villa"
+    },
+    {
+      "id": 2,
+      "name": "House"
+    },
+    {
+      "id": 3,
+      "name": "Room"
+    }
+  ],
+  "rentType": [
+    {
+      "id": 1,
+      "name": "Year"
+    },
+    {
+      "id": 2,
+      "name": "Month"
+    },
+    {
+      "id": 3,
+      "name": "Day"
+    },
+    {
+      "id": 4,
+      "name": "Hour"
+    }
+  ],
+  "contract": [
+    {
+      "id": 1,
+      "facility": {
+        "id": 1,
+        "name": "Villa"
+      },
+      "customer": {
+        "id": 1,
+        "name": "Nguyen Van A"
+      },
+      "starDay": "11/11/2020",
+      "endDay": "22/11/2020",
+      "deposit": 100,
+      "total": 2000
+    },
+    {
+      "id": 2,
+      "facility": {
+        "id": 2,
+        "name": "House"
+      },
+      "customer": {
+        "id": 1,
+        "name": "Nguyen Van A"
+      },
+      "starDay": "11/11/2020",
+      "endDay": "22/11/2020",
+      "deposit": 100,
+      "total": 2000
+    },
+    {
+      "id": 3,
+      "facility": {
+        "id": 3,
+        "name": "Room"
+      },
+      "customer": {
+        "id": 1,
+        "name": "Nguyen Van A"
+      },
+      "starDay": "11/11/2020",
+      "endDay": "22/11/2020",
+      "deposit": 100,
+      "total": 2000
+    },
+    {
+      "id": 4,
+      "starDay": "2022-08-03",
+      "endDay": "2022-08-12",
+      "deposit": 1,
+      "customer": {
+        "id": 43,
+        "name": "A"
+      },
+      "facility": {
+        "id": 3,
+        "name": "ZZZ"
+      },
+      "total": 1
+    }
+  ]
+}

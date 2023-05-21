@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="title">Add Contract</div>
+  <div class="content">
+    <form [formGroup]="contractForm" (ngSubmit)="submit()">
+      <div class="user-details">
+        <div class="input-box">
+          <span class="details">Facility</span>
+          <select class="form-select" formControlName="facility" >
+            <option value="" >-----Choose-----</option>
+            <option *ngFor="let item of facilityList" [ngValue]="item">{{item.name}}</option>
+            <p style="color:red" *ngIf="contractForm.controls.facility.hasError('required') && contractForm.controls.facility.touched"> Is not blank</p>
+          </select>
+        </div>
+        <div class="input-box">
+          <span class="details">Customer</span>
+          <select class="form-select" formControlName="customer" >
+            <option value="" >-----Choose-----</option>
+            <option *ngFor="let item of customerList" [ngValue]="item">{{item.name}}</option>
+            <p style="color:red" *ngIf="contractForm.controls.customer.hasError('required') && contractForm.controls.customer.touched"> Is not blank</p>
+          </select>
+        </div>
+        <div class="input-box">
+          <span class="details">Star date</span>
+          <input type="date" formControlName="starDay">
+          <p style="color:red" *ngIf="contractForm.controls.starDay.hasError('required') && contractForm.controls.starDay.touched"> Is not blank</p>
+        </div>
+        <div class="input-box">
+          <span class="details">End date</span>
+          <input type="date" formControlName="endDay">
+          <p style="color:red" *ngIf="contractForm.controls.endDay.hasError('required') && contractForm.controls.endDay.touched"> Is not blank</p>
+        </div>
+        <div class="input-box">
+          <span class="details">Deposit</span>
+          <input formControlName="deposit" type="number" placeholder="Enter your deposit" >
+          <p style="color:red" *ngIf="contractForm.controls.deposit.hasError('required') && contractForm.controls.deposit.touched"> Is not blank</p>
+          <p style="color:red" *ngIf="contractForm.controls.deposit.hasError('min')"> Deposit > 0</p>
+        </div>
+        <div class="input-box">
+          <span class="details">Total</span>
+          <input type="number" formControlName="total" placeholder="Enter your total" >
+          <p style="color:red" *ngIf="contractForm.controls.total.hasError('required') && contractForm.controls.total.touched"> Is not blank</p>
+          <p style="color:red" *ngIf="contractForm.controls.total.hasError('min')"> Total > 0</p>
+        </div>
+      </div>
+      <div class="button">
+        <input type="submit" [disabled]="!contractForm.valid" value="Save">
+      </div>
+    </form>
+  </div>
+</div>
